@@ -1,0 +1,22 @@
+{
+  "name": "Saifee Light House",
+  "short_name": "Saifee Light House",
+  "description": "Customer Warranty & Guarantee Tracker",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F7F4",
+  "theme_color": "#1C1C1E",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
