@@ -4,9 +4,9 @@ import { MenuItem } from "@/lib/models/menu-item.model";
 import { type CategoryData } from "@/lib/menu/types";
 import { MenuHero } from "@/components/menu/public/MenuHero";
 import { MenuDivider } from "@/components/menu/public/MenuDivider";
-import { CategoryCard } from "@/components/menu/public/CategoryCard";
-import { MenuEmptyState } from "@/components/menu/public/MenuEmptyState";
+import { MenuDisplay } from "@/components/menu/public/MenuDisplay";
 import { MenuFooter } from "@/components/menu/public/MenuFooter";
+import { CartSummary } from "@/components/menu/public/CartSummary";
 
 async function getMenu(): Promise<CategoryData[]> {
   try {
@@ -44,23 +44,16 @@ export default async function MenuPage() {
   const visibleCategories = categories.filter((c) => c.items.length > 0);
 
   return (
-    <div className="min-h-screen bg-[#091a0f] text-[#f5f0e8]">
+    <div className="min-h-screen bg-[#091a0f] text-[#f5f0e8] pb-40 sm:pb-24">
       <MenuHero />
       <MenuDivider />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-        {visibleCategories.length === 0 ? (
-          <MenuEmptyState />
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {visibleCategories.map((category) => (
-              <CategoryCard key={category._id} category={category} />
-            ))}
-          </div>
-        )}
+        <MenuDisplay categories={visibleCategories} />
       </main>
 
       <MenuFooter />
+      <CartSummary />
     </div>
   );
 }

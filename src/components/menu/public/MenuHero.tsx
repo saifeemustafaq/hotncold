@@ -19,11 +19,16 @@ export function MenuHero() {
         <p className="text-[#8aab97] text-sm sm:text-base mt-3 leading-relaxed">
           Authentic flavors, lovingly crafted for every occasion
         </p>
-        <div className="mt-5 inline-flex items-center gap-2 bg-[#d4a017]/10 border border-[#d4a017]/30 rounded-full px-4 py-2">
-          <span className="text-[#d4a017] text-sm">📞</span>
-          <span className="text-[#d4a017] text-sm font-medium">
-            Contact us to place your order
-          </span>
+        <div className="mt-5 flex flex-col items-center gap-3">
+          <div className="inline-flex items-center gap-2 bg-[#d4a017]/10 border border-[#d4a017]/30 rounded-full px-4 py-2">
+            <span className="text-[#d4a017] text-sm">🎉</span>
+            <span className="text-[#d4a017] text-sm font-medium">
+              Bulk Order Discounts: 10% off (5+ items) • 20% off (10+ items)
+            </span>
+          </div>
+          <p className="text-[#8aab97] text-xs">
+            Order more to save more! The discount will be applied automatically.
+          </p>
         </div>
       </div>
     </header>

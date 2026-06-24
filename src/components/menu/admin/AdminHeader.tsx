@@ -21,6 +21,7 @@ export function AdminHeader({ onLogout }: Props) {
             size="sm"
             className="text-[#8aab97] text-xs hover:text-[#f5f0e8] hover:bg-[#1a3a27] border border-transparent hover:border-[#2d5a3d]"
             render={<a href="/" target="_blank" />}
+            nativeButton={false}
           >
             View Menu ↗
           </Button>
